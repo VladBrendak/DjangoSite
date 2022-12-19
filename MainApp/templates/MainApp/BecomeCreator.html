@@ -1,0 +1,31 @@
+{% extends 'MainApp/index.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="form_container">
+    <form action="" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="label_container">
+            <div class="privacy_text">
+                <h3> Terms of use and privacy policy</h3>
+                <br>
+                By posting your products on this site, you are responsible for the files you post. If the files you exhibit are a threat, then you are responsible for it. If your exhibited product does not meet these conditions, it will be removed immediately.
+            </div>
+            <div class="input_creator_accept">
+                <label class="form_label"> Confirm all privacy policy </label>
+                {{form.is_creator}}
+            </div> 
+            <input type="submit" value="ACCEPT">
+
+            <div class="form_error"> {{f.errors}} 
+                {% for message in messages %}
+                    <p>{{message}}</p>
+                {% endfor %}
+            </div>
+        </div>
+    </form>
+</div>
+
+
+{% endblock content %}

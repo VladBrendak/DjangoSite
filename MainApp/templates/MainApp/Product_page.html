@@ -1,0 +1,79 @@
+{% extends 'MainApp/index.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="product_page_con">
+    <div class="first_con">
+        <div>
+            <h2 class="title"> {{ product.product_title }} </h2>
+            <h3 class="full_title"> {{ product.product_fullname }} </h3>
+            <span class="full_desc"> {{ product.product_description }} </span>
+        </div>
+        <div class="creator_con">
+            <span class="from_crtr"> from {{product.creator.nickname}}</span>
+        </div>
+    </div>
+    <div class="second_con">
+        {% for image in images %}
+            <div class="product_imgs">
+                <img src="{{ image.image.url }}" alt="">
+            </div>
+        {% endfor %}
+        {% if request.user.is_authenticated %}
+        <div class="buy_con">
+            <button class="update-cart button_cart button_cart1" data-product="{{product.id}}" data-action="add" > <h3> Add to </h3>  <i class="fa fa-shopping-cart"></i></button>
+        </div>
+        {% else %}
+        <div class="log_in_required">
+            You should log in to use cart
+        </div>
+        {% endif %}
+    </div>
+</div>
+
+
+<div class="comment_con">
+    <div class="coments"> <h2>Comments</h2> </div>
+
+    <form method="POST" action="">
+        {% csrf_token %}
+        
+        {% if request.user.is_authenticated %}
+        <label class="custom_coment_label" for=""> Add Your Comment </label>
+        <div class="custom_coment_text"> {{form.comment_text}}  </div>
+        <div class="button_comment_con">
+            <button class="button_comment button_comment1" type="submit"> Add comment </button>
+        </div>
+        {% else %}
+        <label class="custom_coment_label" for=""> Log In to be able to add comment </label>
+        {% endif %}
+        
+    
+        
+        <div class="form_error"> {{f.errors}} </div>
+        {% for message in messages %}
+            <p>{{message}}</p>
+        {% endfor %}
+    </form>
+
+    {% for comment in comments %}
+    <div class="comment" >
+        <div class="commentor_name">
+            <span><b> {{comment.comment_nickname}} </b> </span>
+        </div>
+        <div class="comment_text">
+            <span> {{comment.comment_text}} </span>
+        </div>
+        <div class="time_created">
+            <span> {{comment.created_at}} </span>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+<div style="width: 100%; height: 100px; clear: both;"></div>
+
+{% endblock content %}

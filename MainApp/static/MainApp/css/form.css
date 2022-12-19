@@ -1,0 +1,190 @@
+.label_container input{
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0 20px;
+    display: inline-block;
+    /* border: 1px solid #ccc; */
+    box-sizing: border-box;
+  }
+  
+.label_container {
+    color: aliceblue;
+    border-radius: 5px;
+    background-color: #f2f2f200;
+    padding: 20px;
+  }
+
+
+  .register_txt{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  input[type=submit] {
+    width: 100%;
+    background-color: #4cafa2;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  input[type=submit]:hover {
+    width: 100%;
+    background-color: aqua;
+    color: darkcyan;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  .form_container
+  {
+      width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 50px;
+      border: dashed 1px aqua;
+      background-color: rgb(78, 78, 78);
+  }
+  
+  .form_container_login
+  {
+      width: 400px;
+      margin-left: auto;
+      margin-right: auto;
+      border: dashed 1px aqua;
+      background-color: rgb(78, 78, 78);
+  }
+
+.form_error
+{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(255, 98, 98);
+}
+
+.form_error p{
+    color: rgb(255, 98, 98);
+}
+
+.div_button_style1
+{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 20px;
+    background-color: #4cafa2;;
+    width: 150px;
+    height: 40px;
+}
+
+.div_button_style1 a
+{
+    color: aliceblue;
+    text-decoration: none;
+}
+
+.div_button_style1:hover
+{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 20px;
+    background-color: aqua;
+    color: darkcyan;
+    width: 150px;
+    height: 40px;
+}
+
+.div_button_style1:hover a
+{
+    color: darkcyan;
+}
+
+.user_page_con
+{
+    width: 1000px;
+    padding-right: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    height: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(127, 255, 212, 0.11);
+    border: aqua solid 1px;
+    margin-bottom: 50px;
+}
+
+.user_main_info
+{
+    float: left;
+    width: 40%;
+
+}
+
+.user_page_avatar
+{
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    height: 150px;
+}
+
+.user_page_avatar img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.user_page_desc
+{
+    float: left;
+    width: 600px;
+}
+
+.user_page_nickname
+{
+    margin-top: 20px;
+    color: aliceblue;
+    font-size: 18px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.user_page_add_product
+{
+    margin-top: 20px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input_creator_accept input
+{
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.input_creator_accept
+{
+    margin-top: 20px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.privacy_text
+{
+    background-color: rgba(0, 0, 0, 0.199);
+    padding: 10px;
+}

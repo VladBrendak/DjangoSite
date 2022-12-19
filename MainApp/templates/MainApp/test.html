@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ title }}</title>
+</head>
+<body>
+    <div class="header_conteiner">
+        <div class="header_upper">
+
+            <div class="header_logo">
+                <img src="logo.png" alt="Logo">
+            </div>
+
+            <div class="search__container">
+                <input class="search__input" type="text" placeholder="Search">
+            </div>
+
+            <div class="user_account">
+                <div class="login_singup">
+                    <span>
+                        <a href=""> Log In </a>
+                    </span>
+                    <span>
+                        <a href=""> Sing Up </a>
+                    </span>
+                </div>
+                <div class="user_avatar">
+                    <img src="" alt="">
+                </div>
+                <div class="user_nickname">
+                    <span class="user_nickname_text_limit"> User </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="header_nav_menu">
+            <nav class="navMenu">
+                {% for m in navMenu %}
+                <a href="#">{{m}}</a>
+                {% endfor %}
+                <div class="dot"></div>
+            </nav>
+        </div>
+
+
+
+        <!-- <div class="header_nav_menu">
+            <nav class="navMenu">
+                <a class="active" href="#">Home</a>
+                <a href="#">Information</a>
+                <a href="#">Shop</a>
+                <a href="header31.html">About</a>
+                <div class="dot"></div>
+            </nav>
+        </div> -->
+    </div>
+
+    <div class="home_page">
+        <div class="home_text">
+            <h1> WELCOME !!! </h1>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum sit, in nisi delectus ullam dolores cum blanditiis facilis maiores minima ratione eius dolorem nulla magni itaque ducimus sint vel corporis?
+        </div>
+        <div class="home_img" >
+            <img src="Lightbulb1.png" alt="">
+        </div>
+    </div>
+
+    <!-- <div class="card_container">
+
+        <div class="card">
+            <img src="horce.jpg" alt="">
+            <h1>horce</h1>
+            <p class="price">$19.99</p>
+            <p>Some text about the object..</p>
+            <p><button>Buy</button></p>
+        </div>
+    
+        <div class="card">
+            <img src="robot.jpg" alt="">
+            <h1>robot</h1>
+            <p class="price">$19.99</p>
+            <p>Some text about the object..</p>
+            <p><button>Buy</button></p>
+        </div>
+    
+        <div class="card">
+            <img src="bike.jpg" alt="">
+            <h1>bike</h1>
+            <p class="price">$19.99</p>
+            <p>Some text about the object..</p>
+            <p><button>Buy</button></p>
+        </div>
+    </div>
+
+    <div class="card_container">
+
+        <div class="card">
+            <img src="pistol.jpg" alt="">
+            <h1>Object</h1>
+            <p class="price">$19.99</p>
+            <p>Some text about the object..</p>
+            <p><button>Buy</button></p>
+        </div>
+    
+        <div class="card">
+            <img src="people.jpg" alt="">
+            <h1>Object</h1>
+            <p class="price">$19.99</p>
+            <p>Some text about the object..</p>
+            <p><button>Buy</button></p>
+        </div>
+    
+        <div class="card">
+            <img src="kozak.jpg" alt="">
+            <h1>Object</h1>
+            <p class="price">$19.99</p>
+            <p>Some text about the object..</p>
+            <p><button>Buy</button></p>
+        </div>
+    </div>
+     -->
+    
+</body>
+</html>

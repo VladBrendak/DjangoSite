@@ -1,0 +1,312 @@
+ /* ---------- main body settings ---------- */
+
+ @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+ * {
+   margin: 0;
+   padding: 0;
+   font-family: "Montserrat", sans-serif;
+   text-decoration: none;
+ }
+ 
+ body {
+   background: #272727;
+   font-family: "Montserrat", sans-serif;
+ }
+
+ .navMenu {
+   margin-top: 20px;
+   position: absolute;
+   /* top: 50%; */
+   left: 50%;
+   -webkit-transform: translate(-50%, 0);
+   transform: translate(-50%, 0);
+   margin-left: auto;
+ }
+ 
+ .navMenu a {
+   padding: 5px;
+   color: #f6f4e6;
+   text-decoration: none;
+   font-size: 1.2em;
+   text-transform: uppercase;
+   font-weight: 500;
+   display: inline-block;
+   -webkit-transition: all 0.2s ease-in-out;
+   transition: all 0.2s ease-in-out;
+ }
+ 
+ .navMenu a:hover {
+   color: rgb(0, 192, 192);
+ }
+ 
+ .navMenu .dot {
+   width: 6px;
+   height: 6px;
+   background: rgb(0, 192, 192);
+   border-radius: 50%;
+   opacity: 0;
+   -webkit-transform: translateX(30px);
+   transform: translateX(30px);
+   -webkit-transition: all 0.2s ease-in-out;
+   transition: all 0.2s ease-in-out;
+ }
+ 
+ .navMenu a:nth-child(1):hover ~ .dot {
+   -webkit-transform: translateX(30px);
+   transform: translateX(30px);
+   -webkit-transition: all 0.2s ease-in-out;
+   transition: all 0.2s ease-in-out;
+   opacity: 1;
+ }
+ 
+ .navMenu a:nth-child(2):hover ~ .dot {
+   -webkit-transform: translateX(110px);
+   transform: translateX(110px);
+   -webkit-transition: all 0.2s ease-in-out;
+   transition: all 0.2s ease-in-out;
+   opacity: 1;
+ }
+ 
+ .navMenu a:nth-child(3):hover ~ .dot {
+   -webkit-transform: translateX(200px);
+   transform: translateX(200px);
+   -webkit-transition: all 0.2s ease-in-out;
+   transition: all 0.2s ease-in-out;
+   opacity: 1;
+ }
+ 
+ .navMenu a:nth-child(4):hover ~ .dot {
+   -webkit-transform: translateX(285px);
+   transform: translateX(285px);
+   -webkit-transition: all 0.2s ease-in-out;
+   transition: all 0.2s ease-in-out;
+   opacity: 1;
+ }
+ 
+ .navMenu a.active{
+     color: aqua;
+ }
+
+ /* ---------- header settings ---------- */
+ 
+ .header_logo{
+  width: 230px;
+  height: 50px;
+    /* background-color: aliceblue; */
+}
+
+.header_logo img{
+  width: 230px;
+  height: 50px;
+}
+
+.header_upper{
+    width: 100%;
+    display: flex;
+}
+ 
+ .header_conteiner{
+     padding: 20px 20px 80px 20px;
+ }
+ 
+ .user_avatar{
+   height: 50px;
+   width: 50px;
+   margin-left: 10px;
+   /* background-color: antiquewhite; */
+   border-radius: 50%;
+ }
+ 
+ /* ----------  user settings ---------- */
+
+ .user_account{
+   width: 230px;
+   display: flex;
+   margin-right: 0;
+ }
+ 
+ .user_nickname
+ {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin-top: 8px;
+   padding: 10px;
+ }
+ 
+ .user_nickname_text_limit
+ {
+   color: aliceblue;
+   overflow: hidden;
+   font-weight: 500;
+   font-size: 34;
+   text-overflow: ellipsis;
+   max-width: 130px;
+   -webkit-box-orient: vertical;
+ }
+ 
+ .login_singup
+ {
+   display: flex;
+   /* display: none; */
+ }
+ 
+ .login_singup span
+ {
+   text-decoration: none;
+   margin-top: auto;
+   margin-bottom: 0;
+   padding: 10px;
+   display: flex;
+   justify-content: center;
+   font-weight: 500;
+   font-size: 34;
+ }
+ 
+ .login_singup a
+ {
+   color: aliceblue;
+ }
+
+.cart_link
+{
+  width: fit-content;
+  text-decoration: none;
+  color: #f6f4e6;
+  width: fit-content;
+}
+
+.cart
+{
+  width: 100pxt;
+}
+
+
+
+.cart i{
+  font-size: 36px;
+}
+ 
+ /* ---------- search settings ---------- */
+ 
+ .search__container {
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+  padding-left: 0px;
+  padding-right: 5px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.search__title {
+        font-size: 22px;
+        font-weight: 900;
+        text-align: center;
+        color: #ffffff;
+    }
+
+.search__input {
+        width: 95%;
+        padding: 12px 12px 12px 12px;
+
+        background-color: transparent;
+        transition: transform 250ms ease-in-out;
+        font-size: 14px;
+        line-height: 18px;
+        
+        color: #ffffff;
+        background-color: transparent;
+ 
+      background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24'%3E%3Cpath d='M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z'/%3E%3Cpath d='M0 0h24v24H0z' fill='none'/%3E%3C/svg%3E ");
+        background-repeat: no-repeat;
+        background-size: 18px 18px;
+        background-position: 95% center;
+        border-radius: 50px;
+        border: 1px solid #707070;
+        transition: all 250ms ease-in-out;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+    }
+
+.search__input::placeholder {
+            color: rgba(145, 145, 145, 0.8);
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+        }
+
+.search__input:hover,
+        .search__input:focus {
+            /* padding: 12px 0; */
+            outline: 0;
+            border: 1px solid transparent;
+            border-bottom: 1px solid aqua;
+            border-radius: 0;
+            background-position: 95% center;
+        }
+
+ 
+/* ---------- footer setting ---------- */
+
+.content {
+  min-height: 100%;
+  padding: 0px 0px 200px; /* 70px = footer height + expected padding */
+  margin-bottom: -200px;  /* brings the footer into the padding gap */
+}
+
+.footer_div
+{
+  height: 200px;
+  margin-top: -50px;
+}
+
+.footer_content
+{
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+}
+
+.footer_box1
+{
+  padding-top: 15px;
+  padding-left: 5%;
+  padding-right: 5%;
+  max-width: 400px;
+}
+
+.AllRights{
+  color: #6b6b6b;
+  padding-top: 12px;
+}
+
+.footer_box2
+{
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.footer_box3
+{
+  padding-left: 5%;
+  padding-right: 10%;
+}
+
+.footer_line
+{
+  margin: auto;
+  width: 95%;
+  border: #1b1b1b 1px solid;
+}
+
+.footer_span
+{
+  padding: 5px;
+}
+
+.footer_span a{
+  text-decoration: none;
+  color: aliceblue;
+}

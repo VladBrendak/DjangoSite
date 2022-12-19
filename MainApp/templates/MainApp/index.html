@@ -1,0 +1,154 @@
+{% load static %}
+
+{% block header %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link text="text/css" href="{% static 'MainApp/css/style.css' %}" rel="stylesheet"/>
+    <link text="text/css" href="{% static 'MainApp/css/styleHome.css' %}" rel="stylesheet"/>
+    <link text="text/css" href="{% static 'MainApp/css/styleShop.css' %}" rel="stylesheet"/>
+    <link text="text/css" href="{% static 'MainApp/css/styleNovelties.css' %}" rel="stylesheet"/>
+    <link text="text/css" href="{% static 'MainApp/css/styleProduct_page.css' %}" rel="stylesheet"/>
+    <link text="text/css" href="{% static 'MainApp/css/styleUser_page.css' %}" rel="stylesheet"/>
+    <link text="text/css" href="{% static 'MainApp/css/stylePagination.css' %}" rel="stylesheet"/>
+    <link text="text/css" href="{% static 'MainApp/css/form.css' %}" rel="stylesheet"/>
+    <link text="text/css" href="{% static 'MainApp/css/cart.css' %}" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>{{ title }}</title>
+
+    <script type="text/javascript">
+        var user = '{{request.user}}'
+
+        function getToken(name) {
+		    var cookieValue = null;
+		    if (document.cookie && document.cookie !== '') {
+		        var cookies = document.cookie.split(';');
+		        for (var i = 0; i < cookies.length; i++) {
+		            var cookie = cookies[i].trim();
+		            // Does this cookie string begin with the name we want?
+		            if (cookie.substring(0, name.length + 1) === (name + '=')) {
+		                cookieValue = decodeURIComponent(cookie.substring(name.length + 1));
+		                break;
+		            }
+		        }
+		    }
+		    return cookieValue;
+		}
+		var csrftoken = getToken('csrftoken')
+    </script>
+
+</head>
+<body>
+
+<div class="header_conteiner">
+    <div class="header_upper">
+
+        <a href=" {% url 'home' %}">
+            <div class="header_logo">
+                    <img src="{% static 'MainApp/images/YourCreations.png' %}" alt="Logo">
+            </div>
+        </a>
+
+        <div class="search__container">
+            <input class="search__input" type="text" placeholder="Search">
+        </div>
+
+        <div class="user_account">
+            <div class="login_singup">
+                {% if request.user.is_authenticated %}
+                <span>
+                    <a href="{% url 'logout' %}"> Log Out </a>
+                </span>
+                {% else %}
+                <span>
+                    <a href="{% url 'login' %}"> Log In </a>
+                </span>
+                <span>
+                    <a href="{% url 'register' %}"> Register </a>
+                </span>
+                {% endif %}
+            </div>
+            
+            <div class="">
+                <a href="{% url 'user_page' %}">
+                    {% if request.user.customer.avatar_photo %}
+                    <img class="user_avatar" src="{{ request.user.customer.avatar_photo.url }}" alt="">
+                    {% else %}
+                    <img class="user_avatar" src="{% static 'MainApp/images/user_avatar.png' %}" alt="">
+                    {% endif %}
+                </a>
+            </div>
+            
+            {% if request.user.is_authenticated %}
+            <a class="card_link" href="{% url 'user_page' %}">
+                <div class="user_nickname">
+                    <span class="user_nickname_text_limit"> {{request.user}} </span>
+                </div>
+            </a>
+            {% endif %}
+           
+        </div>
+    </div>
+
+    <div class="header_nav_menu">
+        <nav class="navMenu">
+            {% for m in navMenu %}
+            <a href=" {% url m.url_name %} "> {{m.url_name}} </a>  <!-- class="active" -->
+            {% endfor %}
+            <div class="dot"></div>
+        </nav>
+        {% if request.user.is_authenticated %}
+        <a class="cart_link" href="{% url 'cart' %}">
+            <div class="cart">
+                <span style="color: aliceblue; width: fit-content;" > <i class="fa fa-shopping-cart" style="text-decoration: none; font-size: 36px; color: aliceblue;" > </i> {{cartItems}} </span>
+            </div>
+        </a>
+        {% endif %}
+    </div>
+</div>
+
+{% endblock header %}
+
+<div class="content">
+{% block content %}
+{% endblock content %}
+</div>
+
+{% block footer %}
+<div class="footer_div">
+    <div class="footer_line"> </div>
+    <footer class="footer">
+        <div class="footer_content">
+            <div class="footer_box1">
+                <p class="footer_span"><b>YourCreations3D</b></p>
+                <span class="footer_site_desc">This site is a pet project that was created to write a thesis, everything is done to learn new technologies and gain experience in website development. </span>
+                <p class="AllRights"> ©  2022 YourCreation3D - All Rights Reserved. </p>
+            </div>
+            <div class="footer_box2">
+                <p class="footer_span"><b> Contacts</b></p>
+                <p class="footer_span"><b>email: </b></p>
+                <p class="footer_span">YourCreations3D@email.com</p>
+                <p class="footer_span"><b>phone:</b></p>
+                <p class="footer_span">+380 67 528 9353</p>
+            </div>
+            <div class="footer_box3">
+                <p class="footer_span"><b>Links</b></p>
+                <p class="footer_span"><a href="{% url 'home' %}">Home</a></p>
+                <p class="footer_span"><a href="{% url 'shop' %}">Shop</a></p>
+                <p class="footer_span"><a href="{% url 'novelties' %}">Novelties</a></p>
+                <p class="footer_span"><a href="{% url 'login' %}">Log in</a></p>
+                <p class="footer_span"><a href="{% url 'register' %}">Register</a></p>
+            </div>
+        </div>
+    </footer>
+</div>
+{% endblock footer %}
+
+
+<script type="text/javascript" src="{% static 'MainApp\js\cart.js' %}" ></script>
+
+</body>
+</html>

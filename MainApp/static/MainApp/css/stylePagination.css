@@ -1,0 +1,40 @@
+
+.list_pages
+{
+    border: dashed 2px green;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.nov_list_pages
+{
+    border: dashed 2px green;
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* .ul_pagination
+{
+    
+} */
+
+.page_num
+{
+    display: inline-block;
+    border: dashed 2px aqua;
+    width: 60px;
+    height: 60px;
+}
+
+.list_pages .selected
+{
+    background-color: aquamarine;
+}
+
+.page_num a
+{
+    width: 100%;
+    height: 100%;
+}

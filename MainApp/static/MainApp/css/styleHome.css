@@ -1,0 +1,31 @@
+
+.home_page
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.home_img img{
+  right: 0;
+  height: 450px;
+  width: 450px;
+  margin-right: 0;
+}
+
+.home_text
+{
+  text-align: justify;
+  width: 500px;
+  color: aliceblue;
+  /* padding-bottom: 30px; */ /* if u wanna set text to up*/
+}
+
+.space_betwen
+{
+    width: 4%;
+}

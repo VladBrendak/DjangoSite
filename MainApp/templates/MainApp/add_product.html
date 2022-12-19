@@ -1,0 +1,31 @@
+{% extends 'MainApp/index.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="form_container">
+    <form action=" {% url 'add_product' %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+       
+        <div class="form_error">{{ form.non_field_errors }}</div>
+
+       
+        <div class="label_container">
+            {% for f in form %}
+            <div><label class="form_label" for="{{f.id_for_label}}">{{f.label}}:</label></div>{{ f }}
+            <div class="form_error"> {{f.errors}} </div>
+            {% endfor %}
+
+            <label for=""> Multiple Photos </label>
+            <input required name="images" type="file" multiple class="multiple_photos">
+            <input type="submit" value="Add product">
+        </div>
+        
+
+        {% for message in messages %}
+            <p>{{message}}</p>
+        {% endfor %}
+    </form>
+</div>
+
+{% endblock content %}

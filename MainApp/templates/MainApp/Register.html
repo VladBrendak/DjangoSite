@@ -1,0 +1,37 @@
+{% extends 'MainApp/index.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="form_container">
+    
+    <form method="POST" action="">
+        {% csrf_token %}
+
+        <div class="form_error">{{ form.non_field_errors }}</div>
+        
+        <div class="label_container">
+            <div class="register_txt" >
+                <h2> Registration </h2>
+            </div> 
+            {% for f in form %}
+            <label class="form_label" for="">{{f.label}}:</label>{{ f }}
+            <div class="form_error"> {{f.errors}} </div>
+            {% endfor %}
+
+            <div class="form_error"> {{f.errors}} 
+                {% for message in messages %}
+                    <p>{{message}}</p>
+                {% endfor %}
+            </div>
+            <input type="submit" value="Submit">
+        </div>
+       
+        {% for message in messages %}
+            <p>{{message}}</p>
+        {% endfor %}
+
+    </form>
+</div>
+
+{% endblock content %}

@@ -1,0 +1,212 @@
+.nov_product
+{
+  width: 360px;
+}
+
+.nov_product_container
+{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nov_avatar
+{
+  height: 50px;
+  width: 50px;
+  /* background-color: antiquewhite; */
+  border-radius: 50%;
+}
+
+.nov_creator
+{
+  display: flex;
+  padding-bottom: 15px;
+  padding-left: 20px;
+  padding-top: 15px;
+}
+
+.nov_nickname
+{
+  padding-top: 20px;
+  padding-left: 15px;
+}
+
+.nov_content
+{
+  float: left;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 60px;
+  border: solid 1px aqua;
+  background-color: rgb(55, 94, 94);
+}
+
+.novelties_container
+{
+  padding-bottom: 15px;
+}
+
+.novelties_container h1
+{
+  padding-bottom: 15px;
+  text-align: center;
+  color: aliceblue;
+}
+
+.novelties_container .card_title
+{
+  color: antiquewhite;
+  padding: 32px 15px 0px 15px;
+}
+
+.novelties_container .card_price
+{
+  margin-top: 7%;
+  padding-right: 25px;
+}
+
+.novelties_container .card_content
+{
+  height: 80px;
+}
+
+.novelties_container .card_container
+{
+  padding: 0;
+}
+
+.novelties_container .card_container
+{
+  display: flex;
+}
+
+.novelties_container .card {
+  margin: auto;
+}
+
+/* .creators_container .nov_content
+{
+  width: 322px;
+  margin-left: 30px;
+  margin-right: 30px;
+  border: dashed 2px aqua;
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='aqua' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  background-color: rgba(0, 255, 255, 0.178);
+}
+
+.creators_container
+{
+  display: flex;
+  margin-left: 22px;
+  width: 100%;
+  max-height: 90px;
+} */
+
+.all_creators{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.creators_container .nov_content
+{
+  float: left;
+  max-width: 322px;
+  margin: 0 20px 40px 20px;
+  border: solid 3px rgb(0, 170, 170);
+  background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='rgb(0, 170, 170)' stroke-width='4' stroke-dasharray='6%2c 14' stroke-dashoffset='5' stroke-linecap='square'/%3e%3c/svg%3e");
+  background-color: rgba(0, 255, 255, 0.178);
+}
+
+.creators_container
+{
+  margin: 0 15px 0 30px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.creators_container .nov_creator
+{
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  height: 100px;
+  padding: 0px;
+}
+
+.creators_container .nov_avatar
+{
+  padding: 0;
+  margin: 0;
+  width: 100px;
+  height: 100px;
+}
+
+.creators_container .nov_nickname
+{
+  display: inline-block;
+  width: 250px;
+  padding-top: 15px;
+  padding-left: 0;
+  margin: 0;
+}
+
+.all_creators_title h1
+{
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  text-align: center;
+  color: aliceblue;
+}
+
+.creators_container .nov_avatar
+{
+  margin-top: 15px;
+}
+
+@media screen and (min-width: 450px) {
+  .nov_product_container{
+    width: 422px;
+  }
+
+  .creators_container
+  {
+    width: 296px;
+  }
+} 
+
+@media screen and (min-width: 1000px) {
+  .nov_product_container{
+    width: 844px;
+  }
+
+  .creators_container
+  {
+    width: 592px;
+  }
+} 
+
+@media screen and (min-width: 1300px) {
+  .nov_product_container{
+    width: 1266px;
+  }
+
+  .creators_container
+  {
+    width: 888px;
+  }
+}
+
+@media screen and (min-width: 1746px) {
+  .creators_container
+  {
+    width: 1184px;
+  }
+}
+
+@media screen and (min-width: 2200px) {
+  .creators_container
+  {
+    width: 1480px;
+  }
+}

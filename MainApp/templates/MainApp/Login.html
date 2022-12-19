@@ -1,0 +1,28 @@
+{% extends 'MainApp/index.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<div class="form_container_login">
+    <form method="POST" action="">
+        {% csrf_token %}
+        <div class="label_container">
+            <div class="register_txt" >
+                <h2> Log In </h2>
+            </div> 
+            <label for="">Username</label> <input type="text" name="username">
+            <label for="">Password</label> <input type="password" name="password">
+            <input type="submit" value="Log in">
+
+            <div class="form_error"> {{f.errors}} 
+                {% for message in messages %}
+                    <p>{{message}}</p>
+                {% endfor %}
+            </div>
+        </div>
+        
+    </form>
+</div>
+
+{% endblock content %}

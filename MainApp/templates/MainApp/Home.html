@@ -1,0 +1,15 @@
+{% extends 'MainApp/index.html' %}
+{% load static %}
+
+{% block content %}
+<div class="home_page">
+    <div class="home_text">
+        <h1> WELCOME !!! </h1>
+        Do you like these light bulbs? Here you can view similar 3D models, buy them to use for your own purposes, and if you are a beginner or little-known author, we offer you the opportunity to exhibit your own models on our site, and increase your popularity!
+    </div>
+    <div class="space_betwen"></div>
+    <div class="home_img" >
+        <img src=" {% static 'MainApp/images/Light_bulbs1.png' %} " alt="">
+    </div>
+</div>
+{% endblock content %}
